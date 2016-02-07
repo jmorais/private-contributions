@@ -14,21 +14,15 @@ popd > /dev/null
 
 cd "${BASE_DIR}"
 
-echo "On ${BASE_DIR}"
-
 SCRIPT_ABSPATH=`echo "$BASE_DIR"/"$SCRIPT_NAME" | sed -e "s#\/#\\\\\/#g"`
-
-echo "SCRIPT_ABSPATH=${SCRIPT_ABSPATH}"
-
 chmod +x "$BASE_DIR/$SCRIPT_NAME"
-
-echo "chmod +x $BASE_DIR/$SCRIPT_NAME"
 
 echo "Created $BASE_DIR/$SCRIPT_NAME"
 
 cp "$PLIST.template" "$PLIST"
 sed "s#PROGRAM_PATH#$SCRIPT_ABSPATH#g" "$PLIST.template" > "$PLIST"
 mv "$PLIST" "$LAUNCHD_DIR"
+
 echo "Created $LAUNCHD_DIR/$PLIST"
 
 launchctl unload "$LAUNCHD_DIR/$PLIST"
