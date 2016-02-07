@@ -12,7 +12,8 @@ Crie um repositório para onde os commits serão enviados e tornados públicos. 
 pasta do seu repositório copie os arquivos do Private Contributions.
 
 Crie um arquivo chamado `private_repos` e, em cada linha, coloque o path para os
-seus repositórios privados.
+seus repositórios privados. Utilize a versão expandida do path, i. e.,
+`/Users/jmorais/private-repo` em vez de `~/Users/jmorais/private-repo`.
 
 Antes de executar o arquivo de instalação, **leia todo o conteúdo para ter certeza
 que nada vai destruir seu computador. Ao executar o arquivo a culpa de qualquer
