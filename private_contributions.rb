@@ -30,6 +30,6 @@ dates.each do |date|
   system "git commit --allow-empty -m '[Private commit]'"
 end
 
-puts "All commits up to date! 🍺"
+system "git push" unless dates.empty?
 
-system "echo `pwd -L` > /Users/jmorais/Desktop/ae_caralhow"
+puts "All commits up to date! 🍺"
