@@ -41,6 +41,21 @@ step, a empty commit is made, with the command `git commit --allow-empty -m '[Pr
 Empty commits are, du'h, empty. Only the date from the real repo commit is copied
 and then published. Github will use these dates to plot your contribution graphic.
 
+Why
+-------
+
+Why would you want to share your private commits with the world? Well, if you're
+looking for jobs, your recruiter can see you work a lot. If all your commits were
+private *de facto*, he would see nothing and think you're a lazy developer.
+
+Or, if you have a boss like I had, that went to check my contributions to the
+company repo but forgot to log in. He obviously couldn't see anything and then
+asked me to his office where he started to ask why I wasn't working hard or whatever.
+I asked why he was talking like that, he said he saw my profile. I showed him, now
+logged in, all my contributions. Got a day off as apologize for this confusion.
+
+Then I started to mirror my private commits.
+
 Credits
 -------
 
