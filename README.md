@@ -1,46 +1,47 @@
 Private Contributions
 ========
 
-Como nem todas as contribuições que faço aqui no GitHub são públicas, criei um
-script que pega minhas contribuições privadas e cria mirrors públicas, pras
-estatísticas do meu perfil serem visíveis para todos.
+As not every contribution I make here on GitHub is public, I created a script that
+takes all my private contributions and make public mirrors, so my Github contribution
+graph is avaiable for any visitor in my profile.
 
-Instalação
+Usage
 -------
 
-Crie um repositório para onde os commits serão enviados e tornados públicos. Na
-pasta do seu repositório copie os arquivos do Private Contributions.
+Create a repo where all your commits will be pushed and made public. Don't worry,
+only the dates will be public. On this new repo, copy all files from Private
+Contributions.
 
-Crie um arquivo chamado `private_repos` e, em cada linha, coloque o path para os
-seus repositórios privados. Utilize a versão expandida do path, i. e.,
-`/Users/jmorais/private-repo` em vez de `~/Users/jmorais/private-repo`.
+Create a file called `private_repos` and list, one per line, all your private
+repos' paths. Use the expanded version, i.e., `/Users/jmorais/private-repo` instead
+of `~/Users/jmorais/private-repo`.
 
-Antes de executar o arquivo de instalação, **leia todo o conteúdo para ter certeza
-que nada vai destruir seu computador. Ao executar o arquivo a culpa de qualquer
-problema é sua e apenas sua.**
+Then, **read all the contents of install.sh and private_contributions.rb so you
+can be sure nothing bad will happen with your files. If, by any misfortune, something
+happens to you, it's not my fault. Use at your own risk**.
 
-**Apenas após ler o arquivo de instalação**, execute. Ele fará a instalação (du'h) do
-agente que rodará o script uma vez por dia. Assim seus commits privados estarão
-sempre atualizados.
+Now that you read and checked all executables, procced to install with
 
-Como Funciona
+```
+$ ./install.sh
+```
+
+After the install, your commits from repos listed on `private_repos` will be
+published once a day on your repo.
+
+How it works
 -------
 
-O script visita todas os seus repositórios e pega uma lista de todas as datas
-de commits (com o comando `git --no-pager log --format=%cI`). Todas as datas são
-então comparadas com as datas dos commits já publicados, para evitar commits com
-datas duplicadas. As novas datas são então enviadas, uma a uma, para as variáveis
-`ENV['GIT_AUTHOR_DATE']` e `ENV['GIT_COMMITTER_DATE']`, que são usadas pelo
-`git commit` como a data do commit. Por fim, é realizado o commit vazio, com o
-comando `git commit --allow-empty -m '[Private commit]'`.
+The script looks all your repos and make a list of all commit dates, with the
+command `git --no-pager log --format=%cI`. All dates are then checked against
+your public repo to avoid duplicates. Then, `ENV['GIT_AUTHOR_DATE']` and
+`ENV['GIT_COMMITTER_DATE']` are set with the new dates, one by one. At each
+step, a empty commit is made, with the command `git commit --allow-empty -m '[Private commit]'`.
 
-Como os commits são vazios e com uma mensagem padrão (`[Private commit]`), nada
-do seu repositório original, exceto a data, é publicada. O GitHub então usa esses
-commits vazios para plotar o gráfico de contribuições. Você verá contribuições
-"duplicadas", já que possui acesso aos commits privados. Mas os visitantes do seu
-perfil apenas verão os commits `[Private commit]`.
+Empty commits are, du'h, empty. Only the date from the real repo commit is copied
+and then published. Github will use these dates to plot your contribution graphic.
 
-Créditos
+Credits
 -------
 
-Desenvolvido por José Morais ([@jmorais](https://github.com/jmorais))
+Developed by José Morais ([@jmorais](https://github.com/jmorais))
