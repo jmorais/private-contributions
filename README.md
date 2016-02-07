@@ -23,6 +23,23 @@ problema é sua e apenas sua.**
 agente que rodará o script uma vez por dia. Assim seus commits privados estarão
 sempre atualizados.
 
+Como Funciona
+-------
+
+O script visita todas os seus repositórios e pega uma lista de todas as datas
+de commits (com o comando `git --no-pager log --format=%cI`). Todas as datas são
+então comparadas com as datas dos commits já publicados, para evitar commits com
+datas duplicadas. As novas datas são então enviadas, uma a uma, para as variáveis
+`ENV['GIT_AUTHOR_DATE']` e `ENV['GIT_COMMITTER_DATE']`, que são usadas pelo
+`git commit` como a data do commit. Por fim, é realizado o commit vazio, com o
+comando `git commit --allow-empty -m '[Private commit]'`.
+
+Como os commits são vazios e com uma mensagem padrão (`[Private commit]`), nada
+do seu repositório original, exceto a data, é publicada. O GitHub então usa esses
+commits vazios para plotar o gráfico de contribuições. Você verá contribuições
+"duplicadas", já que possui acesso aos commits privados. Mas os visitantes do seu
+perfil apenas verão os commits `[Private commit]`.
+
 Créditos
 -------
 
