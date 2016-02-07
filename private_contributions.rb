@@ -6,7 +6,7 @@ require 'shellwords'
 private_repos = []
 
 File.open('private_repos').each do |private_repo|
-  private_repos << private_repo.shellescape
+  private_repos << private_repo.chomp.shellescape
 end
 
 commited_dates = `git --no-pager log --format=%cI`.lines.map(&:chomp)

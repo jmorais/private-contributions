@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>privatecontributions.jmorais.github</string>
+        <string>github.jmorais.privatecontributions</string>
         <key>ProgramArguments</key>
         <array>
             <string>PROGRAM_PATH</string>

@@ -3,7 +3,7 @@
 set -e
 set -u
 
-PROCESS=privatecontributions.jmorais.github
+PROCESS=github.jmorais.privatecontributions
 PLIST="$PROCESS".plist
 LAUNCHD_DIR=~/Library/LaunchAgents
 SCRIPT_PATH=~/.privatecontributions
