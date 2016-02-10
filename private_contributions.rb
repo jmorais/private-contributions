@@ -31,3 +31,5 @@ end
 system "git push" unless dates.empty?
 
 puts "All commits up to date! 🍺"
+
+system 'syslog -s -k Facility com.apple.console Level Error Sender PrivateContributions Message "All commits up to date! 🍺"'
