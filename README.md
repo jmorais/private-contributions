@@ -1,12 +1,10 @@
-Private Contributions
-========
+# Private Contributions
 
 As not every contribution I make here on GitHub is public, I created a script that
 takes all my private contributions and make public mirrors, so my Github contribution
 graph is avaiable for any visitor in my profile.
 
-Usage
--------
+## Usage
 
 Create a repo where all your commits will be pushed and made public. Don't worry,
 only the dates will be public. On this new repo, copy all files from Private
@@ -29,8 +27,7 @@ $ ./install.sh
 After the install, your commits from repos listed on `private_repos` will be
 published once a day on your repo.
 
-How it works
--------
+## How it works
 
 The script looks all your repos and make a list of all commit dates, with the
 command `git --no-pager log --format=%cI`. All dates are then checked against
@@ -41,8 +38,7 @@ step, a empty commit is made, with the command `git commit --allow-empty -m '[Pr
 Empty commits are, du'h, empty. Only the date from the real repo commit is copied
 and then published. Github will use these dates to plot your contribution graphic.
 
-Why
--------
+## Why
 
 Why would you want to share your private commits with the world? Well, if you're
 looking for jobs, your recruiter can see you work a lot. If all your commits were
@@ -56,7 +52,6 @@ logged in, all my contributions. Got a day off as apologize for this confusion.
 
 Then I started to mirror my private commits.
 
-Credits
--------
+## Credits
 
 Developed by José Morais ([@jmorais](https://github.com/jmorais))
