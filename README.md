@@ -12,7 +12,7 @@ Contributions.
 
 Create a file called `private_repos` and list, one per line, all your private
 repos' paths. Use the expanded version, i.e., `/Users/jmorais/private-repo` instead
-of `~/Users/jmorais/private-repo`.
+of `~/private-repo`.
 
 Then, **read all the contents of install.sh and private_contributions.rb so you
 can be sure nothing bad will happen with your files. If, by any misfortune, something
