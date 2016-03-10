@@ -36,7 +36,7 @@ your public repo to avoid duplicates. Then, `ENV['GIT_AUTHOR_DATE']` and
 step, a empty commit is made, with the command `git commit --allow-empty -m '[Private commit]'`.
 
 Empty commits are, du'h, empty. Only the date from the real repo commit is copied
-and then published. Github will use these dates to plot your contribution graphic.
+and then published. Github will use these dates to display your contribution activity.
 
 ## Why
 
