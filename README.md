@@ -4,6 +4,8 @@ As not every contribution I make here on GitHub is public, I created a script th
 takes all my private contributions and make public mirrors, so my Github contribution
 graph is avaiable for any visitor in my profile.
 
+[Github is now displaying private contributions on your profile. Woohoo!] (https://github.com/blog/2173-more-contributions-on-your-profile)
+
 ## Usage
 
 Create a repo where all your commits will be pushed and made public. Don't worry,
